@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products &amp; Prices – Vision Global Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <svg class="nav-globe globe-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="27" stroke="#c9a227" stroke-width="1.4" fill="none"/>
+        <ellipse cx="30" cy="30" rx="13" ry="27" stroke="#c9a227" stroke-width="1.1" fill="none" opacity="0.7"/>
+        <ellipse cx="30" cy="30" rx="27" ry="10" stroke="#c9a227" stroke-width="1.1" fill="none" opacity="0.6"/>
+        <line x1="3" y1="30" x2="57" y2="30" stroke="#c9a227" stroke-width="1" opacity="0.5"/>
+        <line x1="30" y1="3" x2="30" y2="57" stroke="#c9a227" stroke-width="1" opacity="0.5"/>
+        <circle cx="30" cy="30" r="2.5" fill="#c9a227"/>
+      </svg>
+      <div class="nav-name">Vision Global Ltd <small>Lagos, Nigeria</small></div>
+    </a>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="branches.html">Branches</a></li>
+      <li><a href="contact.html" class="nav-cta">Order Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <section id="page-hero">
+    <span>Full Catalogue</span>
+    <h1>Products &amp; <em>Prices</em></h1>
+    <p>All prices are wholesale pack/carton prices. Contact us to confirm current stock and bulk discounts.</p>
+  </section>
+
+  <div id="filter-bar">
+    <div class="search-row">
+      <input type="text" id="searchBox" placeholder="Search products e.g. Coca-Cola, towel..." />
+      <button id="clearBtn">Clear</button>
+    </div>
+    <div class="tab-row">
+      <button class="tab-btn active" data-cat="all">All Products</button>
+      <button class="tab-btn" data-cat="carbonated"> Carbonated</button>
+      <button class="tab-btn" data-cat="energy">Energy</button>
+      <button class="tab-btn" data-cat="juices">Juices</button>
+      <button class="tab-btn" data-cat="yoghurt">Yoghurt</button>
+      <button class="tab-btn" data-cat="malt">Malt Drinks</button>
+      <button class="tab-btn" data-cat="water">Water</button>
+      <button class="tab-btn" data-cat="handkerchiefs">Handkerchiefs</button>
+      <button class="tab-btn" data-cat="towels">Towels</button>
+    </div>
+  </div>
+
+  <p id="results-info">Showing <span id="resultCount">0</span> products</p>
+
+  <section id="catalogue">
+    <div id="productsGrid">
+
+    </div>
+    <div id="noResults">
+      <strong>No products found</strong>
+      <p>Try a different search term or select a different category.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="footer-globe globe-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+          <circle cx="30" cy="30" r="27" stroke="#c9a227" stroke-width="1.4" fill="none" opacity="0.6"/>
+          <ellipse cx="30" cy="30" rx="13" ry="27" stroke="#c9a227" stroke-width="1.1" fill="none" opacity="0.5"/>
+          <ellipse cx="30" cy="30" rx="27" ry="10" stroke="#c9a227" stroke-width="1.1" fill="none" opacity="0.4"/>
+          <circle cx="30" cy="30" r="2.5" fill="#c9a227" opacity="0.7"/>
+        </svg>
+        <h3>Vision Global Ltd</h3>
+        <p>Your trusted wholesale and retail partner across Lagos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="branches.html">Our Branches</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#" onclick="setCategory('carbonated')">Carbonated Drinks</a></li>
+          <li><a href="#" onclick="setCategory('energy')">Energy Drinks</a></li>
+          <li><a href="#" onclick="setCategory('towels')">Towels</a></li>
+          <li><a href="#" onclick="setCategory('handkerchiefs')">Handkerchiefs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>Vision Global Ltd</span>. All rights reserved.</p>
+      <p>Lagos, Nigeria · Wholesale &amp; Retail</p>
+    </div>
+  </footer>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
